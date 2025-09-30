@@ -21,6 +21,7 @@ header {
     text-align: center;
     padding: 20px;
     margin-bottom: 20px;
+    background-color: #FFF8DC;
     color: #3B3928;
 }
 
@@ -29,7 +30,7 @@ main, section {
     max-width: 900px;
     margin: 0 auto;
     padding: 20px;
-    background-color: #fff3ba;
+    background-color: #FFF9D1;
     border-radius: 10px;
 }
 
@@ -160,22 +161,6 @@ main.agenda-semanal-container section {
 .botoes-final button:hover {
     background-color: #E2BE2D;
 
-.botoes-final button {
-    display: inline-block;
-    margin: 10px;
-    padding: 12px 20px;
-    background-color: #F4D03F;
-    color: #333333;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    font-weight: bold;
-    transition: 0.3s;
-}
-
-.botoes-final button:hover {
-    background-color: #E2BE2D;
-}
 
 /* ========= RESPONSIVIDADE ========= */
 @media (max-width: 768px) {
@@ -197,4 +182,4 @@ main.agenda-semanal-container section {
         width: 240px;
     }
 }
-
+}
