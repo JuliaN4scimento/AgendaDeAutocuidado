@@ -12,41 +12,28 @@
     <section aria-labelledby="titulo-cadastro">
       <h1 id="titulo-cadastro">Cadastro</h1>
 
-      <form action="tipoagenda.html" method="post">
+      <form action="tipoagenda.html" method="get">
         <fieldset>
           <legend>Informações Pessoais</legend>
 
           <label for="nome">Nome:</label>
-          <input type="text" id="nome" name="nome" required
-                 oninvalid="this.setCustomValidity('Por favor, preencha seu nome.')"
-                 oninput="this.setCustomValidity('')">
+          <input type="text" id="nome" name="nome" required>
 
           <label for="telefone">Telefone:</label>
-          <input type="tel" id="telefone" name="telefone" required
-                 oninvalid="this.setCustomValidity('Informe um telefone válido.')"
-                 oninput="this.setCustomValidity('')">
+          <input type="tel" id="telefone" name="telefone" required>
 
           <label for="data_nasc">Data de Nascimento:</label>
-          <input type="date" id="data_nasc" name="data_nasc" required
-                 oninvalid="this.setCustomValidity('Selecione sua data de nascimento.')"
-                 oninput="this.setCustomValidity('')">
+          <input type="date" id="data_nasc" name="data_nasc" required>
 
           <label for="email">Email:</label>
-          <input type="email" id="email" name="email" required
-                 oninvalid="this.setCustomValidity('Digite um email válido.')"
-                 oninput="this.setCustomValidity('')">
+          <input type="email" id="email" name="email" required>
 
           <label for="senha">Senha:</label>
-          <input type="password" id="senha" name="senha" required
-                 oninvalid="this.setCustomValidity('Crie uma senha.')"
-                 oninput="this.setCustomValidity('')">
+          <input type="password" id="senha" name="senha" required>
         </fieldset>
-      </form>
-          <div class="botoes-final">
-          <button type="submit" class="botao">Criar Conta</button>
-        </div>
+        <button type="submit"> Criar Conta</button>
+      </form>    
     </section>
   </main>
-
 </body>
 </html>
