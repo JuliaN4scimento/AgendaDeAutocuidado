@@ -83,6 +83,41 @@ th {
     background-color: #F4D03F;
 }
 
+.login-container form fieldset {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border: none;
+}
+
+.login-container label {
+  text-align: left;
+  margin-top: 10px;
+}
+
+.login-container input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #999;
+  border-radius: 5px;
+}
+
+/* Botão do login */
+.login-container button {
+  margin-top: 15px;
+  width: 100%;
+  padding: 10px;
+  background-color: #F4D03F;
+  color: #333333;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.login-container button:hover {
+  background-color: #E2BE2D;
+}
 /* ========= TABELAS DA AGENDA SEMANAL ========= */
 main.agenda-semanal-container {
     overflow-x: auto;
@@ -105,9 +140,13 @@ main.agenda-semanal-container section {
 .botoes-final {
     text-align: center;
     margin-top: 30px;
+}
+
+/* Estilo dos botões */
+.botoes-final button {
     display: inline-block;
-    margin: 10px;
-    padding: 12px 20px;
+    margin: 0 15px;      /* Espaço entre os botões */
+    padding: 10px 25px;  /* Proporcional */
     background-color: #F4D03F;
     color: #333333;
     border: none;
@@ -115,7 +154,11 @@ main.agenda-semanal-container section {
     cursor: pointer;
     font-weight: bold;
     transition: 0.3s;
+    font-size: 16px;
 }
+
+.botoes-final button:hover {
+    background-color: #E2BE2D;
 
 .botoes-final button {
     display: inline-block;
