@@ -39,30 +39,3 @@ def cadastro():
 @app.route("/sucesso")
 def sucesso():
     return "Usuário cadastrado com sucesso!"
-
-
-'''from mysql.connector import (connection)
-
-cnx = connection.MySQLConnection(user='root', 
-                                 password='labinfo',
-                                 host='127.0.0.1',
-                                 database='ajudai'
-                                 )
-cursor = cnx.cursor() # inicio do bd
-
-sql = "insert into pessoa(nome, telefone, nascimento, email, senha) \
-values (%s,%s,%s,%s,%s)"
-
-nome = 'giovanna'
-telefone = '84994611428'
-nasc = '2007-04-09'
-email ='o.giovanna@escolar.ifrn.edu.br'
-senha = '2222'
-
-dados = (nome,telefone,nasc,email,senha)
-
-
-cursor.execute(sql, dados)
-cnx.commit()
-
-cnx.close()'''
