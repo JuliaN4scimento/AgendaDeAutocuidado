@@ -12,7 +12,7 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    color: #333333;
+    color: #3b3928;
     min-height: 100vh;
 }
 
@@ -161,7 +161,7 @@ main.agenda-semanal-container section {
 .botoes-final button:hover {
     background-color: #E2BE2D;
 
-
+}
 /* ========= RESPONSIVIDADE ========= */
 @media (max-width: 768px) {
     main, section {
@@ -181,5 +181,4 @@ main.agenda-semanal-container section {
     main.agenda-semanal-container section {
         width: 240px;
     }
-}
 }
