@@ -8,7 +8,7 @@
 
 /* ========= FUNDO DO SITE ========= */
 body {
-    background-image: url('auto.cuidados.fundo.png');
+    background-image: url("auto.cuidados.fundo.png"); 
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
