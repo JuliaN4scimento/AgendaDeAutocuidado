@@ -8,97 +8,177 @@
 
 /* ========= FUNDO DO SITE ========= */
 body {
-    background: url('auto.cuidados.fundo.png') no-repeat center center fixed;
+    background-image: url('auto.cuidados.fundo.png');
     background-size: cover;
-    min-height: 100vh;
-
-    display: flex;              
-    justify-content: center;    
-    align-items: center;        
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     color: #3b3928;
+    min-height: 100vh;
 }
 
-/* ========= CONTAINER DO LOGIN ========= */
-.login-container {
-    width: 280px; 
-    padding: 25px;
-    background-color: rgba(255, 249, 209, 0.467);
-    border-radius: 15px;
-    backdrop-filter: blur(6px);
-    box-shadow: 0 4px 12px rgba(180, 44, 44, 0.25);
-    text-align: left;
-}
-
-/* ========= TÍTULO ========= */
-.login-container h2 {
+/* ========= CABEÇALHO ========= */
+header {
+    text-align: center;
+    padding: 20px;
     margin-bottom: 20px;
+    background-color: #FFF8DC;
+    color: #3B3928;
+}
+
+/* ========= CONTEÚDO PRINCIPAL ========= */
+main, section {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #FFF9D1;
+    border-radius: 10px;
+}
+
+/* ========= TÍTULOS ========= */
+h1, h2, h3 {
+    text-align: center;
+    margin-bottom: 15px;
     color: #333333;
+}
+
+/* ========= FORMULÁRIOS ========= */
+form {
+    display: block;
+    margin: 0 auto;
     text-align: center;
 }
 
-/* ========= FORMULÁRIO ========= */
-.login-container form {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
+input, select, textarea {
+    padding: 8px;
+    border: 1px solid #999;
+    border-radius: 4px;
+    background-color: #FFFFFF;
+}
+
+/* ========= LINKS ========= */
+a {
+    color: #1E3A5F;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* ========= TABELAS GERAIS ========= */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    background-color: #FFF9D1;
+}
+
+th, td {
+    border: 1px solid #999;
+    padding: 8px;
+    text-align: center;
+}
+
+th {
+    background-color: #F4D03F;
+}
+
+.login-container form fieldset {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border: none;
 }
 
 .login-container label {
-    font-size: 14px;
-    font-weight: bold;
-    color: #333333;
-    text-align: left;
+  text-align: left;
+  margin-top: 10px;
 }
 
-.login-container input,
-.login-container select,
-.login-container textarea {
-    width: 100%;
-    padding: 8px;
-    border: 1px solid #999999;
-    border-radius: 6px;
-    font-size: 14px;
-    background-color: rgba(255, 255, 255, 0.7);
+.login-container input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #999;
+  border-radius: 5px;
 }
 
-/* ========= BOTÃO ========= */
+/* Botão do login */
 .login-container button {
-    padding: 12px;
+  margin-top: 15px;
+  width: 100%;
+  padding: 10px;
+  background-color: #F4D03F;
+  color: #333333;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.login-container button:hover {
+  background-color: #E2BE2D;
+}
+/* ========= TABELAS DA AGENDA SEMANAL ========= */
+main.agenda-semanal-container {
+    overflow-x: auto;
+    white-space: nowrap;
+    background-color: transparent;
+    padding: 0;
+}
+
+main.agenda-semanal-container section {
+    display: inline-block;
+    vertical-align: top;
+    width: 280px;
+    margin: 0 15px;
+    background-color: #FFF9D1;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+/* ========= BOTÕES ========= */
+.botao-final {
+    text-align: center;
+    margin-top: 30px;
+}
+
+/* Estilo dos botões */
+.botoes-final button {
+    display: inline-block;
+    margin: 0 15px;      /* Espaço entre os botões */
+    padding: 10px 25px;  /* Proporcional */
     background-color: #F4D03F;
     color: #333333;
     border: none;
     border-radius: 8px;
-    font-weight: bold;
     cursor: pointer;
-    transition: 0.3s;
-    font-size: 15px;
-    margin: 15px auto 0 auto; 
-    display: block;
-}
-
-.login-container button:hover {
-    background-color: #dac779;
-}
-
-/* ========= LEGEND, FIELDSET ========= */
-.login-container fieldset {
-    border: 1px solid #e9e6c3a5;
-    border-radius: 8px;
-    padding: 10px 15px;
-}
-
-.login-container legend {
-    font-size: 14px;
     font-weight: bold;
-    color: #333;
-    padding: 0 5px;
-    text-align: left; 
+    transition: 0.3s;
+    font-size: 16px;
 }
 
+.botoes-final button:hover {
+    background-color: #E2BE2D;
+
+}
 /* ========= RESPONSIVIDADE ========= */
-@media (max-width: 480px) {
-    .login-container {
-        width: 90%;
-        padding: 20px;
+@media (max-width: 768px) {
+    main, section {
+        max-width: 95%;
+        padding: 15px;
+    }
+
+    table {
+        font-size: 14px;
+    }
+
+    .botoes-final button {
+        width: 100%;
+        max-width: 260px;
+    }
+
+    main.agenda-semanal-container section {
+        width: 240px;
     }
 }
