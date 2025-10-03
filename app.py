@@ -1,17 +1,17 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, redirect, url_for
 import mysql.connector
 
 app = Flask(__name__)
 
 def connectar_banco():
     return mysql.connector.connect(
-        host="localhost"
+        host="localhost",
         user="seu_usuario", 
         password="sua_senha",
-        database="Ajudai" 
+        database="Ajudai"
     )
-@app.route("/", methods=["GET", "POST"])
 
+@app.route("/", methods=["GET", "POST"])
 def index():
     if request.method == "POST":
         nome = request.form["nome"]
@@ -27,8 +27,13 @@ def index():
         cursor.close()
         conn.close()
 
-        return "Dados salvos com sucesso!"
+        return redirect(url_for("tipoagenda"))
+
     return render_template("index.html")
+
+@app.route("/tipoagenda")
+def tipoagenda():
+    return render_template("tipoagenda.html")
 
 if __name__ == "__main__":
     app.run(debug=True)
