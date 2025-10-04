@@ -1,16 +1,36 @@
-from flask import Flask, render_template, request, redirect, jsonify
+from flask import Flask, render_template, request, redirect, url_for
+import mysql.connector
 
 app = Flask(__name__)
-@app.route("/")
-def home():
 
-    return render_template("login.html")
+def connectar_banco():
+    return mysql.connector.connect(
+        host="localhost",
+        user="seu_usuario", 
+        password="sua_senha",
+        database="Ajudai"
+    )
 
+@app.route("/", methods=["GET", "POST"])
+def index():
+    if request.method == "POST":
+        nome = request.form["nome"]
+        email = request.form["email"]
+        senha = request.form["senha"]
+        telefone = request.form["telefone"]
 
-@app.route("/cadastro"), methods=("get")
-def cadastro():
+        conn = connectar_banco()
+        cursor = conn.cursor()
+        sql = "INSERT INTO usuarios (nome, email, senha, telefone) VALUES (%s, %s, %s, %s)"
+        cursor.execute(sql, (nome, email, senha, telefone))
+        conn.commit()
+        cursor.close()
+        conn.close()
 
-    if request.methods == "POST":
+        return redirect(url_for("tipoagenda"))
 
+    return render_template("index.html")
 
-        id = request.form.get
+@app.route("/tipoagenda")
+def tipoagenda():
+    return render_template("tipoagenda.html")
