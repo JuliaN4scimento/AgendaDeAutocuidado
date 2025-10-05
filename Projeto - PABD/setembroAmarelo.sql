@@ -1,6 +1,6 @@
 -- MySQL dump 10.13  Distrib 8.0.43, for Win64 (x86_64)
 --
--- Host: localhost    Database: ajudaibd
+-- Host: localhost    Database: setembroamarelo
 -- ------------------------------------------------------
 -- Server version	8.0.43
 
@@ -26,9 +26,10 @@ CREATE TABLE `usuario` (
   `nome` varchar(150) DEFAULT NULL,
   `telefone` varchar(11) DEFAULT NULL,
   `nascimento` date DEFAULT NULL,
-  `email` varchar(255) DEFAULT NULL,
-  `senha` int DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+  `senha` varchar(10) DEFAULT NULL,
+  `email` varchar(255) NOT NULL,
+  PRIMARY KEY (`email`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -49,4 +50,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2025-10-03 14:14:24
+-- Dump completed on 2025-10-05 12:41:08
