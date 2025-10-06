@@ -16,6 +16,34 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
+-- Table structure for table `agenda_diaria`
+--
+
+DROP TABLE IF EXISTS `agenda_diaria`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `agenda_diaria` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `email_usuario` varchar(100) NOT NULL,
+  `dia` varchar(20) NOT NULL,
+  `horario` time NOT NULL,
+  `atividade` varchar(255) NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `email_usuario` (`email_usuario`),
+  CONSTRAINT `agenda_diaria_ibfk_1` FOREIGN KEY (`email_usuario`) REFERENCES `usuario` (`email`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `agenda_diaria`
+--
+
+LOCK TABLES `agenda_diaria` WRITE;
+/*!40000 ALTER TABLE `agenda_diaria` DISABLE KEYS */;
+/*!40000 ALTER TABLE `agenda_diaria` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `usuario`
 --
 
@@ -38,6 +66,7 @@ CREATE TABLE `usuario` (
 
 LOCK TABLES `usuario` WRITE;
 /*!40000 ALTER TABLE `usuario` DISABLE KEYS */;
+INSERT INTO `usuario` VALUES ('JULIA DA SILVA NASCIMENTO','84996688820','2006-11-27','julia','julia.nascimento1@escolar.ifrn.edu.br'),('julia','84888888888','2006-06-27','12345','julia@gmail.com'),('Maria Beatriz','84999999999','2012-05-30','abcd','maria.beatriz@gmail.com');
 /*!40000 ALTER TABLE `usuario` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -50,4 +79,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2025-10-05 12:41:08
+-- Dump completed on 2025-10-06 11:02:51
