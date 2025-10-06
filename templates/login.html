@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajudaí - login</title>
+</head>
+<body>
+    <header>
+        <h1>Login</h1>
+        <p>Entre com seu e-mail e senha para acessar sua conta</p>
+    </header>
+
+    <main>
+        <form action="{{ url_for('tipoagenda') }}" method="get">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="senha">Senha:</label>
+            <input type="password" id="senha" name="senha" required>
+
+            <button type="submit">Entrar</button>
+        </form>
+
+        <p>Ainda não tem conta? <a href="{{ url_for('cadastro') }}">cadastre-se aqui</a></p>
+    </main>
+</body>
+</html>
