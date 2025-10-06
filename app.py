@@ -58,6 +58,22 @@ def agendadiaria():
 def agendasemanal():
     return render_template('agenda_semanal.html')
 
+#Rota responsavel por inserção de dados na agenda diaria
+@app.route('/final_diaria', methods=['POST'])
+def final_diaria():
+    dia = request.form['dia']
+    email = 'usuario@exemplo.com'  # pegar do login ou do cadastro
+    horarios = request.form.getlist('horario[]')
+    atividades = request.form.getlist('atividade[]')
+
+    for h, a in zip(horarios, atividades):
+        comando = "INSERT INTO agenda_diaria (email_usuario, dia, horario, atividade) VALUES (%s, %s, %s, %s)"
+        cursor.execute(comando, (email, dia, horarios, atividades))
+    conexao.commit()
+
+    return "Agenda salva com sucesso!"
+
+
 #Rodar o flask
 if __name__ == '__main__':
     app.run(debug=True)
