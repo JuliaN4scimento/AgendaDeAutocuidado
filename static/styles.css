@@ -162,6 +162,63 @@ main.agenda-semanal-container section {
     background-color: #E2BE2D;
 
 }
+
+.login-button {
+    text-decoration: none;
+    border: none;
+    color: #333333;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    background-color: #F4D03F;
+    text-align: center;
+    height: 50px;
+    width: 80px;
+}
+
+/* ========= PARTE DO LOGIN ========= */
+
+.conteiner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: Arial, sans-serif;
+  margin: 0;
+}
+
+.conteiner-login {
+    margin-bottom: 220px;
+    padding: 30px 30px;
+    width: 300px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    border-radius: 10px;
+}
+
+.conteiner-login label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+.conteiner-login input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+}
+
+.paragrafo-login {
+    padding-top: 20px;
+    text-align: left;
+}
+
+.texto-login {
+    text-align: center;
+}
+
 /* ========= RESPONSIVIDADE ========= */
 @media (max-width: 768px) {
     main, section {
