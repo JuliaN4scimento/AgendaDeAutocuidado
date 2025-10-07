@@ -4,6 +4,8 @@
     padding: 0;
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 /* ========= FUNDO DO SITE ========= */
@@ -14,6 +16,7 @@ body {
     background-attachment: fixed;
     color: #3b3928;
     min-height: 100vh;
+
 }
 
 /* ========= CABEÇALHO ========= */
