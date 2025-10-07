@@ -16,16 +16,18 @@
   <main>
     <form action="{{ url_for('final_diaria') }}" method="post">
 
+    <div class="input-dia">
       <label for="dia">Escolha o dia:</label>
       <select name="dia" id="dia" required>
-        <opition values="segunda">Segunda-feira</opition>
-        <opition values="terça">Terça-feira</opition>
-        <opition values="quarta">Quarta-feira</opition>
-        <opition values="quinta">Quinta-feira</opition>
-        <opition values="sexta">Sexta-feira</opition>
-        <opition values="sabado">Sábado</opition>
-        <opition values="domingo">Domingo</opition>
+        <option values="segunda">Segunda-feira</opition>
+        <option values="terça">Terça-feira</opition>
+        <option values="quarta">Quarta-feira</opition>
+        <option values="quinta">Quinta-feira</opition>
+        <option values="sexta">Sexta-feira</opition>
+        <option values="sabado">Sábado</opition>
+        <option values="domingo">Domingo</opition>
       </select>
+    </div>
 
       <div id="tarefas-container">
         <div class="tarefa">
