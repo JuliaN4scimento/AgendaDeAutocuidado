@@ -141,6 +141,24 @@ main.agenda-semanal-container section {
 }
 
 /* ========= BOTÕES ========= */
+
+
+.botao-pginicial button {
+    color:#333333;
+    background-color: #F4D03F;
+    margin-top: 30px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 10px 25px;
+    border-radius: 8px;
+}
+
+.botao-pginicial button:hover {
+    background-color: #E2BE2D;
+    transition: 0.5s;
+}
+
 .botao-final {
     text-align: center;
     margin-top: 30px;
@@ -149,7 +167,7 @@ main.agenda-semanal-container section {
 /* Estilo dos botões */
 .botoes-final button {
     display: inline-block;
-    margin: 0 15px;      /* Espaço entre os botões */
+    margin: 30px 40px;      /* Espaço entre os botões */
     padding: 10px 25px;  /* Proporcional */
     background-color: #F4D03F;
     color: #333333;
@@ -157,7 +175,7 @@ main.agenda-semanal-container section {
     border-radius: 8px;
     cursor: pointer;
     font-weight: bold;
-    transition: 0.3s;
+    transition: 0.5s;
     font-size: 16px;
 }
 
@@ -179,6 +197,7 @@ main.agenda-semanal-container section {
     height: 50px;
     width: 80px;
 }
+
 
 /* ========= PARTE DO LOGIN ========= */
 
