@@ -96,3 +96,4 @@ def final_diaria():
 #Rodar o flask
 if __name__ == '__main__':
     app.run(debug=True)
+

@@ -1,3 +1,5 @@
+CREATE DATABASE  IF NOT EXISTS `setembroamarelo` /*!40100 DEFAULT CHARACTER SET utf8mb3 */ /*!80016 DEFAULT ENCRYPTION='N' */;
+USE `setembroamarelo`;
 -- MySQL dump 10.13  Distrib 8.0.43, for Win64 (x86_64)
 --
 -- Host: localhost    Database: setembroamarelo
@@ -66,7 +68,7 @@ CREATE TABLE `usuario` (
 
 LOCK TABLES `usuario` WRITE;
 /*!40000 ALTER TABLE `usuario` DISABLE KEYS */;
-INSERT INTO `usuario` VALUES ('JULIA DA SILVA NASCIMENTO','84996688820','2006-11-27','julia','julia.nascimento1@escolar.ifrn.edu.br'),('julia','84888888888','2006-06-27','12345','julia@gmail.com'),('Maria Beatriz','84999999999','2012-05-30','abcd','maria.beatriz@gmail.com');
+INSERT INTO `usuario` VALUES ('JULIA DA SILVA NASCIMENTO','84996688820','2006-11-27','julia','julia.nascimento1@escolar.ifrn.edu.br'),('Julia','84999999999','2006-11-27','12345','julia.nascimento@gmail.com'),('julia','84888888888','2006-06-27','12345','julia@gmail.com'),('Maria Beatriz','84999999999','2012-05-30','abcd','maria.beatriz@gmail.com'),('Giovanna Oliveira de Souza','84994611428','2007-04-09','12345','o.giovanna@escolar.ifrn.edu.br'),('julia','84000000000','2006-11-27','1234','qualquercoisa@gmail.com');
 /*!40000 ALTER TABLE `usuario` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -79,4 +81,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2025-10-06 11:02:51
+-- Dump completed on 2025-10-07 20:03:14
