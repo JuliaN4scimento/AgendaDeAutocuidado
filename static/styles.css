@@ -111,7 +111,7 @@ th {
   margin-top: 15px;
   width: 100%;
   padding: 10px;
-  background-color: #F4D03F;
+  background-color: #FFF8DC;
   color: #333333;
   border: none;
   border-radius: 8px;
@@ -120,7 +120,8 @@ th {
 }
 
 .login-container button:hover {
-  background-color: #E2BE2D;
+  background-color: #ffeda3;
+  transition: 0.5s;
 }
 /* ========= TABELAS DA AGENDA SEMANAL ========= */
 main.agenda-semanal-container {
@@ -142,10 +143,13 @@ main.agenda-semanal-container section {
 
 /* ========= BOTÕES ========= */
 
-
+.botao-pginicial {
+    display:flex;
+    justify-content: center;
+}
 .botao-pginicial button {
     color:#333333;
-    background-color: #F4D03F;
+    background-color: #FFF8DC;
     margin-top: 30px;
     border: none;
     font-size: 16px;
@@ -155,7 +159,7 @@ main.agenda-semanal-container section {
 }
 
 .botao-pginicial button:hover {
-    background-color: #E2BE2D;
+    background-color: #ffeda3;
     transition: 0.5s;
 }
 
@@ -165,11 +169,17 @@ main.agenda-semanal-container section {
 }
 
 /* Estilo dos botões */
+
+.botoes-final {
+    display: flex;
+    justify-content: center;
+}
+
 .botoes-final button {
     display: inline-block;
     margin: 30px 40px;      /* Espaço entre os botões */
     padding: 10px 25px;  /* Proporcional */
-    background-color: #F4D03F;
+    background-color: #FFF8DC;
     color: #333333;
     border: none;
     border-radius: 8px;
@@ -180,7 +190,7 @@ main.agenda-semanal-container section {
 }
 
 .botoes-final button:hover {
-    background-color: #E2BE2D;
+    background-color: #ffeda3;
 
 }
 
@@ -192,10 +202,15 @@ main.agenda-semanal-container section {
     border-radius: 8px;
     cursor: pointer;
     font-weight: bold;
-    background-color: #F4D03F;
+    background-color: #FFF8DC;
     text-align: center;
     height: 50px;
     width: 80px;
+}
+
+.login-button:hover {
+    background-color: #ffeda3;
+    transition: 0.5s;
 }
 
 
@@ -211,7 +226,7 @@ main.agenda-semanal-container section {
 }
 
 .conteiner-login {
-    margin-bottom: 220px;
+    margin-bottom: 290px;
     padding: 30px 30px;
     width: 300px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
@@ -234,11 +249,13 @@ main.agenda-semanal-container section {
 
 .paragrafo-login {
     padding-top: 20px;
-    text-align: left;
+    text-align: center;
 }
 
 .texto-login {
     text-align: center;
+    background-color: #F4D03F;
+    padding: 50px 70px;
 }
 
 /* ========= RESPONSIVIDADE ========= */
