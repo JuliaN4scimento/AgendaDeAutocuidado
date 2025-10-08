@@ -113,11 +113,10 @@ def salvar_agenda_semanal():
         # Se o usuário não estiver logado, volta pro login
         return redirect(url_for('login'))
 
-    dias_semana = request.form.getlist('dia_semana[]')
     horarios = request.form.getlist('horario[]')
     atividades = request.form.getlist('atividade[]')
 
-    for dia, hora, atividade in zip(dias_semana, horarios, atividades):
+    for dia, hora, atividade in zip(horarios, atividades):
         if atividade.strip():  # ignora linhas vazias
             comando = """
                 INSERT INTO agenda_semanal (email_usuario, dia_semana, horario, atividade)
