@@ -16,6 +16,7 @@
 
 <conteiner class="conteiner">
     <main class="conteiner-login">
+        <section class="hero">
     
         <form action="{{ url_for('login') }}" method="post">
             <label for="email">Email:</label>
@@ -26,6 +27,7 @@
 
             <button class="login-button" type="submit">Entrar</button>
         </form>
+      </section>
 
         <p class="paragrafo-login">Ainda não tem conta? <a href="{{ url_for('cadastro') }}">cadastre-se aqui</a></p>
     </main>
