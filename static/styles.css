@@ -30,6 +30,43 @@ header {
     color: #3B3928;
 }
 
+/* ========= NAVEGAÇÃO =========== */
+/*
+ * ========================================
+ * NAVEGAÇÃO (NAVBAR)
+ * ========================================
+ */
+
+/* Estilo para a lista principal da navegação */
+.navbar ul {
+    list-style: none; /* Remove os marcadores de bolinha/ponto */
+    display: flex;    /* Usa Flexbox para colocar os itens lado a lado */
+    justify-content: center; /* Centraliza os links no cabeçalho */
+    padding: 0;       /* Remove o padding padrão da lista */
+    margin-top: 15px; /* Espaçamento entre o título do header e a barra */
+}
+
+/* Estilo para cada item da lista (link) */
+.navbar li {
+    margin: 0 15px; /* Adiciona espaçamento horizontal entre os links */
+}
+
+/* Estilo específico para os links da navbar */
+.navbar a {
+    color: var(--cor-texto-principal); /* Garante que os links tenham a cor de texto padrão */
+    font-weight: bold;
+    text-decoration: none;
+    padding: 5px 10px; /* Adiciona um pequeno padding para área de clique */
+    transition: color var(--transicao-suave);
+}
+
+/* Efeito de hover */
+.navbar a:hover {
+    color: var(--cor-link); /* Muda a cor ao passar o mouse */
+    text-decoration: underline; /* Deixa sublinhado no hover */
+}
+
+
 /* ========= CONTEÚDO PRINCIPAL ========= */
 main, section {
     max-width: 900px;
@@ -82,6 +119,7 @@ table {
     border: 1px solid black;
 }
 
+/* ========== RODAPÉ ========== */
 footer {
   background-color: #f3d355;  
   color: black;                
@@ -94,6 +132,10 @@ footer {
   bottom: 0%;    
   font-weight: normal;       
 }
+
+
+
+
 
 table thead th {
     background-color: #f3d355;
