@@ -40,7 +40,7 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    color: #3b3928;
+    color: #f3d355;
     min-height: 100vh;
     position: relative;
     display: flex;
@@ -53,7 +53,7 @@ header {
     text-align: center;
     padding: 10px 10px;
     margin-bottom: 20px;
-    background-color: #000000;
+    background-color: #f3d355;
     color: #3B3928;
 }
 
