@@ -62,7 +62,8 @@ header {
 
 /* ========= CONTEÚDO PRINCIPAL ========= */
 main, section {
-    max-width: 900px;
+    max-width: 1200px;
+    width: 100%; 
     margin: 0 auto;
     padding: 20px;
     background-color: #f3d355; 
@@ -229,8 +230,8 @@ main.agenda-semanal-container section {
 
 .botoes-final button {
     display: inline-block;
-    margin: 30px 40px;      /* Espaço entre os botões */
-    padding: 10px 25px;  /* Proporcional */
+    margin: 30px 40px;      
+    padding: 10px 25px;  
     background-color: #FFF8DC;
     color: #333333;
     border: none;
@@ -311,25 +312,19 @@ main.agenda-semanal-container section {
 }
 
 .container-cadastro {
-    max-width: 500px; /* Largura ajustada para ser maior (Ex: 500px) */
-    margin: 40px auto 80px auto; /* Adiciona margem superior/inferior e centraliza */
+    max-width: 500px; 
+    margin: 40px auto 80px auto; 
     padding: 30px;
     background-color: var(--cor-primaria);
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     border-radius: 10px;
-    /* Resetando o estilo de main/section para este container específico: */
     width: 100%;
 }
 
-/*
- * ========================================
- * CORREÇÃO: ALINHAMENTO DO FORMULÁRIO DE CADASTRO
- * ========================================
- */
 .campo-grupo {
-    display: flex; /* Habilita o Flexbox */
-    gap: 20px;     /* Espaço entre os dois campos (Nome e Telefone) */
-    margin-bottom: 20px; /* Espaço para a linha de campos de baixo */
+    display: flex; 
+    gap: 20px;    
+    margin-bottom: 20px; 
 }
 
 .campo-grupo > div {
