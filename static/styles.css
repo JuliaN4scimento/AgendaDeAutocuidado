@@ -1,69 +1,94 @@
 /* ========= RESET GLOBAL ========= */
+ * ========================================
+ * RESET GLOBAL E VARIÁVEIS 
+ * ========================================
+ */
+:root {
+    /* Cores */
+    --cor-primaria: #f3d355; /* Amarelo principal (fundo de main/header) */
+    --cor-secundaria: #FFF9D1; /* Amarelo mais claro (fundo de tabelas) */
+    --cor-terciaria: #FFF8DC; /* Amarelo muito claro (fundo de botões) */
+    --cor-texto-principal: #333333; /* Texto escuro geral (títulos/botões) */
+    --cor-texto-secundario: #3b3928; /* Texto de body */
+    --cor-link: #1E3A5F;
+    --cor-borda: #999;
+    --cor-hover: #ffeda3; /* Cor de hover dos botões */
+    --cor-header-fundo: #F4D03F; /* Fundo do cabeçalho da tabela / texto-login */
+
+    /* Tipografia */
+    --fonte-principal: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    --tamanho-fonte-padrao: 16px;
+
+    /* Espaçamento e Cantos */
+    --espacamento-padrao: 20px;
+    --raio-borda-padrao: 8px;
+    --transicao-suave: 0.3s;
+}
+
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box; /* Essencial para layout */
+    font-family: var(--fonte-principal);
     font-weight: bold;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    /* Removida a linha duplicada de font-family */
 }
 
-/* ========= FUNDO DO SITE ========= */
+/*
+ * ========================================
+ * ESTRUTURA E FUNDO
+ * ========================================
+ */
 body {
-    background-image: url("auto.cuidados.fundo.png"); 
+    background-image: url("auto.cuidados.fundo.png");
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    color: #3b3928;
-    min-height: 100vh;
+    color: var(--cor-texto-secundario);
+    min-height: 100vh; /* Garante que o body ocupe toda a altura */
     position: relative;
-    
-
+    font-size: var(--tamanho-fonte-padrao);
 }
 
-/* ========= CABEÇALHO ========= */
+/*
+ * ========================================
+ * CABEÇALHO
+ * ========================================
+ */
 header {
     text-align: center;
-    padding: 20px;
-    margin-bottom: 20px;
-    background-color: #f3d355;
-    color: #3B3928;
+    padding: var(--espacamento-padrao);
+    margin-bottom: var(--espacamento-padrao);
+    background-color: var(--cor-primaria);
+    color: var(--cor-texto-secundario);
 }
 
-/* ========= CONTEÚDO PRINCIPAL ========= */
+/*
+ * ========================================
+ * CONTEÚDO PRINCIPAL (MAIN/SECTION)
+ * ========================================
+ */
 main, section {
     max-width: 900px;
     margin: 0 auto;
-    padding: 20px;
-    background-color: #f3d355; 
+    padding: var(--espacamento-padrao);
+    background-color: var(--cor-primaria);
     border-radius: 10px;
-    
 }
 
-/* ========= TÍTULOS ========= */
+/*
+ * ========================================
+ * TIPOGRAFIA E LINKS
+ * ========================================
+ */
 h1, h2, h3 {
     text-align: center;
     margin-bottom: 15px;
-    color: #333333;
+    color: var(--cor-texto-principal);
 }
 
-/* ========= FORMULÁRIOS ========= */
-form {
-    display: block;
-    margin: 0 auto;
-    text-align: center;
-}
-
-input, select, textarea {
-    padding: 8px;
-    border: 1px solid #999;
-    border-radius: 4px;
-    background-color: #FFFFFF;
-}
-
-/* ========= LINKS ========= */
 a {
-    color: #1E3A5F;
+    color: var(--cor-link);
     text-decoration: none;
     font-weight: bold;
 }
@@ -100,169 +125,20 @@ th, td {
     text-align: center;
 }
 
-th {
-    background-color: #F4D03F;
+input, select, textarea {
+    /* Estilos base para todos os inputs */
+    padding: 8px;
+    border: 1px solid var(--cor-borda);
+    border-radius: 4px; /* Raio menor para inputs/selects */
+    background-color: #FFFFFF;
 }
-
 
 .login-container form fieldset {
   display: flex;
   flex-direction: column;
   gap: 10px;
   border: none;
-}
-
-.login-container label {
-  text-align: left;
-  margin-top: 10px;
-}
-
-.login-container input {
-  width: 100%;
-  padding: 8px;
-  border: 1px solid #999;
-  border-radius: 5px;
-}
-
-/* Botão do login */
-.login-container button {
-  margin-top: 15px;
-  width: 100%;
-  padding: 10px;
-  background-color: #FFF8DC;
-  color: #333333;
-  border: none;
-  border-radius: 8px;
-  font-weight: bold;
-  cursor: pointer;
-}
-
-.login-container button:hover {
-  background-color: #ffeda3;
-  transition: 0.5s;
-}
-/* ========= TABELAS DA AGENDA SEMANAL ========= */
-main.agenda-semanal-container {
-    overflow-x: auto;
-    white-space: nowrap;
-    background-color: transparent;
-    padding: 0;
-}
-
-main.agenda-semanal-container section {
-    display: inline-block;
-    vertical-align: top;
-    width: 280px;
-    margin: 0 15px;
-    background-color: #FFF9D1;
-    padding: 10px;
-    border-radius: 8px;
-}
-
-/* ========= BOTÕES ========= */
-
-.botao-pginicial {
-    display:flex;
-    justify-content: center;
-}
-.botao-pginicial button {
-    color:#333333;
-    background-color: #FFF8DC;
-    margin-top: 30px;
-    border: none;
-    font-size: 16px;
-    cursor: pointer;
-    padding: 10px 25px;
-    border-radius: 8px;
-}
-
-.botao-pginicial button:hover {
-    background-color: #ffeda3;
-    transition: 0.5s;
-}
-
-.botao-final {
-    text-align: center;
-    margin-top: 30px;
-}
-
-/* Estilo dos botões */
-
-.botoes-final {
-    display: flex;
-    justify-content: center;
-}
-
-.botoes-final button {
-    display: inline-block;
-    margin: 30px 40px;      /* Espaço entre os botões */
-    padding: 10px 25px;  /* Proporcional */
-    background-color: #FFF8DC;
-    color: #333333;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    font-weight: bold;
-    transition: 0.5s;
-    font-size: 16px;
-}
-
-.botoes-final button:hover {
-    background-color: #ffeda3;
-
-}
-
-.login-button {
-    text-decoration: none;
-    border: none;
-    color: #333333;
-    font-size: 16px;
-    border-radius: 8px;
-    cursor: pointer;
-    font-weight: bold;
-    background-color: #FFF8DC;
-    text-align: center;
-    height: 50px;
-    width: 80px;
-}
-
-.login-button:hover {
-    background-color: #ffeda3;
-    transition: 0.5s;
-}
-
-
-/* ========= PARTE DO LOGIN ========= */
-
-.conteiner {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  font-family: Arial, sans-serif;
-  margin: 0;
-}
-
-.conteiner-login {
-    margin-bottom: 290px;
-    padding: 30px 30px;
-    width: 300px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    border-radius: 10px;
-}
-
-.conteiner-login label {
-    display: block;
-    font-weight: bold;
-    margin-bottom: 5px;
-    text-align: left;
-}
-
-.conteiner-login input {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border-radius: 5px;
+  padding: 0; /* Remove padding padrão do fieldset */
 }
 
 .paragrafo-login {
@@ -272,14 +148,146 @@ main.agenda-semanal-container section {
 
 .texto-login {
     text-align: center;
-    background-color: #F4D03F;
+    background-color: var(--cor-header-fundo);
     padding: 50px 70px;
 }
 
-/* ========= RESPONSIVIDADE ========= */
+.container-cadastro {
+    max-width: 500px; /* Largura ajustada para ser maior (Ex: 500px) */
+    margin: 40px auto; /* Adiciona margem superior/inferior e centraliza */
+    padding: 30px;
+    background-color: var(--cor-primaria);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    /* Resetando o estilo de main/section para este container específico: */
+    width: 100%;
+}
+
+/*
+ * ========================================
+ * BOTÕES (Estilo Base e Específicos)
+ * ========================================
+ */
+
+/* Estilo base para TODOS os botões */
+button {
+    color: var(--cor-texto-principal);
+    background-color: var(--cor-terciaria);
+    border: none;
+    border-radius: var(--raio-borda-padrao);
+    font-weight: bold;
+    cursor: pointer;
+    font-size: var(--tamanho-fonte-padrao);
+    padding: 10px 25px; /* Padding base para todos */
+    transition: background-color var(--transicao-suave);
+}
+
+button:hover {
+    background-color: var(--cor-hover);
+}
+
+/* Botão principal (Página Inicial) */
+.botao-pginicial {
+    display: flex;
+    justify-content: center;
+}
+.botao-pginicial button {
+    margin-top: 30px;
+}
+
+/* Botões do final de telas (Geral) */
+.botoes-final {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Para mobile */
+    margin-top: 30px;
+}
+.botoes-final button {
+    margin: 10px 15px;
+}
+
+/* Botão único no final de telas (como no Cadastro) */
+.botao-final {
+    text-align: center;
+    margin-top: 30px;
+}
+
+/* Botão Específico de Login */
+.login-button {
+    /* Reaproveitando o estilo base, apenas ajustando o layout */
+    width: 100%;
+    height: auto; /* Remove a altura fixa */
+    padding: 10px; /* Garante o padding do botão base */
+    margin-top: 15px;
+    /* Removido todos os estilos redundantes (font-size, color, etc.) */
+}
+
+/*
+ * ========================================
+ * TABELAS E AGENDA
+ * ========================================
+ */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    background-color: var(--cor-secundaria);
+}
+
+th, td {
+    border: 1px solid var(--cor-borda);
+    padding: 8px;
+    text-align: center;
+}
+
+th {
+    background-color: var(--cor-header-fundo);
+}
+
+main.agenda-semanal-container {
+    overflow-x: auto;
+    white-space: nowrap;
+    background-color: transparent;
+    padding: 0;
+    max-width: 100%; /* Permite o uso de toda a largura */
+}
+
+main.agenda-semanal-container section {
+    display: inline-block;
+    vertical-align: top;
+    width: 280px;
+    margin: 0 15px 30px 15px; /* Adicionado margem inferior */
+    background-color: var(--cor-secundaria);
+    padding: 10px;
+    border-radius: var(--raio-borda-padrao);
+    white-space: normal;
+}
+
+/*
+ * ========================================
+ * RODAPÉ (FOOTER)
+ * ========================================
+ */
+footer {
+  background-color: var(--cor-primaria);
+  color: black;
+  text-align: center;
+  padding: 20px 0; /* Reduzido o padding para não ser tão alto */
+  margin-top: 40px;
+  font-size: 14px;
+  width: 100%;
+  /* REMOVIDO: position: absolute; bottom: 0%; para evitar bugs em páginas longas e manter o layout fluído */
+  font-weight: normal;
+}
+
+/*
+ * ========================================
+ * RESPONSIVIDADE (MEDIA QUERIES)
+ * ========================================
+ */
 @media (max-width: 768px) {
     main, section {
-        max-width: 95%;
+        max-width: 98%;
         padding: 15px;
     }
 
@@ -287,13 +295,20 @@ main.agenda-semanal-container section {
         font-size: 14px;
     }
 
+    /* Empilhamento dos botões em telas menores */
+    .botoes-final {
+        flex-direction: column;
+        align-items: center;
+    }
     .botoes-final button {
-        width: 100%;
-        max-width: 260px;
+        width: 80%; /* Mais fácil de tocar */
+        max-width: 300px;
+        margin: 10px 0; /* Espaçamento vertical */
     }
 
+    /* Ajuste para o scroll horizontal na agenda semanal */
     main.agenda-semanal-container section {
-        width: 240px;
+        width: 80vw;
+        margin: 0 5vw 20px 5vw;
     }
 }
-
