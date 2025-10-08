@@ -4,21 +4,17 @@
  */
 :root {
     /* Cores */
-    --cor-primaria: #f3d355; /* Amarelo principal (fundo de main/header) */
-    --cor-secundaria: #FFF9D1; /* Amarelo mais claro (fundo de tabelas) */
-    --cor-terciaria: #FFF8DC; /* Amarelo muito claro (fundo de botões) */
-    --cor-texto-principal: #333333; /* Texto escuro geral (títulos/botões) */
-    --cor-texto-secundario: #3b3928; /* Texto de body */
+    --cor-primaria: #f3d355; 
+    --cor-secundaria: #FFF9D1; 
+    --cor-terciaria: #FFF8DC; 
+    --cor-texto-principal: #333333; 
+    --cor-texto-secundario: #3b3928; 
     --cor-link: #1E3A5F;
     --cor-borda: #999;
-    --cor-hover: #ffeda3; /* Cor de hover dos botões */
-    --cor-header-fundo: #F4D03F; /* Ajustado para a cor que você usou em algumas tabelas */
-
-    /* Tipografia */
+    --cor-hover: #ffeda3; 
+    --cor-header-fundo: #F4D03F; 
     --fonte-principal: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     --tamanho-fonte-padrao: 16px;
-
-    /* Espaçamento e Cantos */
     --espacamento-padrao: 20px;
     --raio-borda-padrao: 8px;
     --transicao-suave: 0.3s;
@@ -40,7 +36,7 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    color: #f3d355;
+    color: #000000;
     min-height: 100vh;
     position: relative;
     display: flex;
@@ -62,12 +58,13 @@ header {
 
 /* ========= CONTEÚDO PRINCIPAL ========= */
 main, section {
-    max-width: 900px;
+    max-width: 1200px;
+    width: 100%; 
     margin: 0 auto;
     padding: 20px;
     background-color: #f3d355; 
     border-radius: 10px;
-    flex-grow: 1; /* Faz o conteúdo principal crescer e ocupar todo o espaço disponível */
+    flex-grow: 1; 
 }
 
 /* ========= TÍTULOS ========= */
@@ -229,8 +226,8 @@ main.agenda-semanal-container section {
 
 .botoes-final button {
     display: inline-block;
-    margin: 30px 40px;      /* Espaço entre os botões */
-    padding: 10px 25px;  /* Proporcional */
+    margin: 30px 40px;      
+    padding: 10px 25px;  
     background-color: #FFF8DC;
     color: #333333;
     border: none;
@@ -311,67 +308,55 @@ main.agenda-semanal-container section {
 }
 
 .container-cadastro {
-    max-width: 500px; /* Largura ajustada para ser maior (Ex: 500px) */
-    margin: 40px auto 80px auto; /* Adiciona margem superior/inferior e centraliza */
+    max-width: 500px; 
+    margin: 40px auto 80px auto; 
     padding: 30px;
     background-color: var(--cor-primaria);
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     border-radius: 10px;
-    /* Resetando o estilo de main/section para este container específico: */
     width: 100%;
 }
 
-/*
- * ========================================
- * CORREÇÃO: ALINHAMENTO DO FORMULÁRIO DE CADASTRO
- * ========================================
- */
 .campo-grupo {
-    display: flex; /* Habilita o Flexbox */
-    gap: 20px;     /* Espaço entre os dois campos (Nome e Telefone) */
-    margin-bottom: 20px; /* Espaço para a linha de campos de baixo */
+    display: flex; 
+    gap: 20px;    
+    margin-bottom: 20px; 
 }
 
 .campo-grupo > div {
-    flex: 1; /* Faz com que cada campo (label+input) ocupe a mesma largura */
-    min-width: 0; /* Garante que o flex item se ajuste corretamente em telas menores */
+    flex: 1; 
+    min-width: 0; 
 }
 
-/* Ajuste nos inputs e labels para funcionarem com o novo layout */
+
 .container-cadastro label {
-    display: block; /* Garante que o label fique acima do input */
+    display: block; 
     font-weight: bold;
     margin-bottom: 5px;
     text-align: left;
-    margin-top: 0; /* Remove a margem superior que usamos antes */
+    margin-top: 0; 
 }
 
-/* Inputs (apenas um ajuste para o campo de data que é menor) */
+
 .container-cadastro input {
     width: 100%;
     padding: 10px;
-    margin-bottom: 0; /* Remove a margem inferior aqui, pois a margem agora está no .campo-grupo */
+    margin-bottom: 0; 
     border-radius: 5px;
     box-sizing: border-box;
 }
 
-/* Estilo para o campo de senha (que está sozinho, mas precisa de margem) */
+
 .campo-senha {
     margin-bottom: 20px;
 }
-/* Alinhamento dos inputs de data/time em um campo de 100%*/
+
 .campo-grupo input[type="date"],
 .campo-grupo input[type="time"] {
     width: 100%;
 }
 
-/*
- * ========================================
- * BOTÕES (Estilo Base e Específicos)
- * ========================================
- */
 
-/* Estilo base para TODOS os botões */
 button {
     color: var(--cor-texto-principal);
     background-color: var(--cor-terciaria);
@@ -388,7 +373,7 @@ button:hover {
     background-color: var(--cor-hover);
 }
 
-/* Botão principal (Página Inicial) */
+
 .botao-pginicial {
     display: flex;
     justify-content: center;
@@ -397,7 +382,6 @@ button:hover {
     margin-top: 30px;
 }
 
-/* Botões do final de telas (Geral) */
 .botoes-final {
     display: flex;
     justify-content: center;
@@ -408,27 +392,20 @@ button:hover {
     margin: 10px 15px;
 }
 
-/* Botão único no final de telas (como no Cadastro) */
 .botao-final {
     text-align: center;
     margin-top: 30px;
 }
 
-/* Botão Específico de Login */
 .login-button {
-    /* Reaproveitando o estilo base, apenas ajustando o layout */
     width: 100%;
-    height: auto; /* Remove a altura fixa */
-    padding: 10px; /* Garante o padding do botão base */
+    height: auto; 
+    padding: 10px; 
     margin-top: 15px;
-    /* Removido todos os estilos redundantes (font-size, color, etc.) */
+
 }
 
-/*
- * ========================================
- * TABELAS E AGENDA
- * ========================================
- */
+
 table {
     width: 100%;
     border-collapse: collapse;
@@ -451,42 +428,34 @@ main.agenda-semanal-container {
     white-space: nowrap;
     background-color: transparent;
     padding: 0;
-    max-width: 100%; /* Permite o uso de toda a largura */
+    max-width: 100%; 
 }
 
 main.agenda-semanal-container section {
     display: inline-block;
     vertical-align: top;
     width: 280px;
-    margin: 0 15px 30px 15px; /* Adicionado margem inferior */
+    margin: 0 15px 30px 15px; 
     background-color: var(--cor-secundaria);
     padding: 10px;
     border-radius: var(--raio-borda-padrao);
     white-space: normal;
 }
 
-/*
- * ========================================
- * RODAPÉ (FOOTER)
- * ========================================
- */
+
 footer {
   background-color: var(--cor-primaria);
   color: black;
   text-align: center;
-  padding: 20px 0; /* Reduzido o padding para não ser tão alto */
+  padding: 20px 0; 
   margin-top: 40px;
   font-size: 14px;
   width: 100%;
-  /* REMOVIDO: position: absolute; bottom: 0%; para evitar bugs em páginas longas e manter o layout fluído */
   font-weight: normal;
 }
 
-/*
- * ========================================
- * RESPONSIVIDADE (MEDIA QUERIES)
- * ========================================
- */
+/* =======RESPONSIVIDADE (MEDIA QUERIES) =========*/
+
 @media (max-width: 768px) {
     main, section {
         max-width: 95%;
