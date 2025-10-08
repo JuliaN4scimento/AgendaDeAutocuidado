@@ -75,6 +75,7 @@ table {
     border-collapse: collapse;
     margin-top: 15px;
     background-color: #FFF9D1;
+    margin-bottom: 30px;
 }
 
 th, td {
@@ -86,6 +87,7 @@ th, td {
 th {
     background-color: #F4D03F;
 }
+
 
 .login-container form fieldset {
   display: flex;
