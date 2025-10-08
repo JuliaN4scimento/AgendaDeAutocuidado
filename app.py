@@ -4,6 +4,7 @@ import mysql.connector
 
 #Aplicação flask
 app = Flask(__name__)
+app.secret_key = "chave"
 
 #Conexão do banco de dados
 conexao = mysql.connector.connect(
@@ -59,6 +60,8 @@ def agendadiaria():
 def agendasemanal():
     return render_template('agenda_semanal.html')
 
+
+#Rota de verificação de login
 @app.route('/login', methods=['GET', 'POST'])
 def login():
     if request.method == 'POST':
@@ -76,22 +79,31 @@ def login():
         else:
             return render_template('login.html', erro='E-mail ou senha incorretos.')
 
+    # Se for GET, apenas mostra a página de login
     return render_template('login.html')
 
+
 #Rota responsavel por inserção de dados na agenda diaria
-@app.route('/final_diaria', methods=['POST'])
-def final_diaria():
-    dia = request.form['dia']
-    email = 'usuario@exemplo.com'  # pegar do login ou do cadastro
+@app.route('/salvar_agenda', methods=['POST'])
+def salvar_agenda():
+    dia = request.form['dia_semana']
     horarios = request.form.getlist('horario[]')
     atividades = request.form.getlist('atividade[]')
+    email_usuario = session.get('usuario_email')  # mesma chave usada no login
+    if not email_usuario:
+        return "Usuário não logado", 401
 
     for h, a in zip(horarios, atividades):
-        comando = "INSERT INTO agenda_diaria (email_usuario, dia, horario, atividade) VALUES (%s, %s, %s, %s)"
-        cursor.execute(comando, (email, dia, h, a))
-    conexao.commit()
+        if a.strip():  # ignora linhas vazias
+            comando = """
+                INSERT INTO agenda_diaria (email_usuario, dia, horario, atividade)
+                VALUES (%s, %s, %s, %s)
+            """
+            valores = (email_usuario, dia, h, a)
+            cursor.execute(comando, valores)
 
-    return "Agenda salva com sucesso!"
+    conexao.commit()
+    return redirect(url_for('agendadiaria'))
 
 #Rodar o flask
 if __name__ == '__main__':
