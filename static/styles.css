@@ -1,12 +1,38 @@
-/* ========= RESET GLOBAL ========= */
+/* ========================================
+ * RESET GLOBAL E VARIÁVEIS (CORREÇÃO DE CORES)
+ * ========================================
+ */
+:root {
+    /* Cores */
+    --cor-primaria: #f3d355; /* Amarelo principal (fundo de main/header) */
+    --cor-secundaria: #FFF9D1; /* Amarelo mais claro (fundo de tabelas) */
+    --cor-terciaria: #FFF8DC; /* Amarelo muito claro (fundo de botões) */
+    --cor-texto-principal: #333333; /* Texto escuro geral (títulos/botões) */
+    --cor-texto-secundario: #3b3928; /* Texto de body */
+    --cor-link: #1E3A5F;
+    --cor-borda: #999;
+    --cor-hover: #ffeda3; /* Cor de hover dos botões */
+    --cor-header-fundo: #F4D03F; /* Ajustado para a cor que você usou em algumas tabelas */
+
+    /* Tipografia */
+    --fonte-principal: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    --tamanho-fonte-padrao: 16px;
+
+    /* Espaçamento e Cantos */
+    --espacamento-padrao: 20px;
+    --raio-borda-padrao: 8px;
+    --transicao-suave: 0.3s;
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: var(--fonte-principal); /* Usando a variável definida */
     font-weight: bold;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
+
+
 
 /* ========= FUNDO DO SITE ========= */
 body {
@@ -17,7 +43,8 @@ body {
     color: #3b3928;
     min-height: 100vh;
     position: relative;
-    
+    display: flex;
+    flex-direction: column;
 
 }
 
@@ -26,45 +53,11 @@ header {
     text-align: center;
     padding: 10px 10px;
     margin-bottom: 20px;
-    background-color: #f3d355;
+    background-color: #000000;
     color: #3B3928;
 }
 
-/* ========= NAVEGAÇÃO =========== */
-/*
- * ========================================
- * NAVEGAÇÃO (NAVBAR)
- * ========================================
- */
 
-/* Estilo para a lista principal da navegação */
-.navbar ul {
-    list-style: none; /* Remove os marcadores de bolinha/ponto */
-    display: flex;    /* Usa Flexbox para colocar os itens lado a lado */
-    justify-content: center; /* Centraliza os links no cabeçalho */
-    padding: 0;       /* Remove o padding padrão da lista */
-    margin-top: 15px; /* Espaçamento entre o título do header e a barra */
-}
-
-/* Estilo para cada item da lista (link) */
-.navbar li {
-    margin: 0 15px; /* Adiciona espaçamento horizontal entre os links */
-}
-
-/* Estilo específico para os links da navbar */
-.navbar a {
-    color: var(--cor-texto-principal); /* Garante que os links tenham a cor de texto padrão */
-    font-weight: bold;
-    text-decoration: none;
-    padding: 5px 10px; /* Adiciona um pequeno padding para área de clique */
-    transition: color var(--transicao-suave);
-}
-
-/* Efeito de hover */
-.navbar a:hover {
-    color: var(--cor-link); /* Muda a cor ao passar o mouse */
-    text-decoration: underline; /* Deixa sublinhado no hover */
-}
 
 
 /* ========= CONTEÚDO PRINCIPAL ========= */
@@ -74,7 +67,7 @@ main, section {
     padding: 20px;
     background-color: #f3d355; 
     border-radius: 10px;
-    
+    flex-grow: 1; /* Faz o conteúdo principal crescer e ocupar todo o espaço disponível */
 }
 
 /* ========= TÍTULOS ========= */
@@ -127,9 +120,7 @@ footer {
   padding: 50px 0;              
   margin-top: 40px;           
   font-size: 14px;           
-  width: 100%;    
-  position: absolute;  
-  bottom: 0%;    
+  width: 100%;       
   font-weight: normal;       
 }
 
@@ -224,22 +215,18 @@ main.agenda-semanal-container section {
     transition: 0.5s;
 }
 
+
 .botao-final {
-    text-align: center;
+    text-align: center; 
     margin-top: 30px;
-    background-color: #FFF8DC;
+    
 }
 
 /* Estilo dos botões */
 
-.botoes {
-    background-color: #FFF8DC;
-}
-
 .botoes-final {
     display: flex;
     justify-content: center;
-    background-color: #FFF8DC;
 }
 
 .botoes-final button {
