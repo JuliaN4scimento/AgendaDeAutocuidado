@@ -10,7 +10,7 @@ app.secret_key = "chave"
 conexao = mysql.connector.connect(
     host="localhost",
     user="root",
-    password="infoj",
+    password="labinfo",
     database="setembroAmarelo"
 )
 
