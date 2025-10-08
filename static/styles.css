@@ -79,6 +79,7 @@ table {
     margin-top: 15px;
     background-color: #FFF9D1;
     margin-bottom: 30px;
+    border: 1px solid black;
 }
 
 footer {
@@ -94,16 +95,16 @@ footer {
   font-weight: normal;       
 }
 
-th, td {
-    border: 1px solid #999;
+table thead th {
+    background-color: #f3d355;
+}
+
+table, table th, table td {
+    border: 1px solid black;
     padding: 8px;
     text-align: center;
+    background-color: #FFF8DC;
 }
-
-th {
-    background-color: #F4D03F;
-}
-
 
 .login-container form fieldset {
   display: flex;
@@ -272,7 +273,7 @@ main.agenda-semanal-container section {
 
 .texto-login {
     text-align: center;
-    background-color: #F4D03F;
+    background-color: #f3d355;
     padding: 50px 70px;
 }
 
