@@ -20,6 +20,7 @@
     <div class="input-dia">
       <label for="dia">Escolha o dia:</label>
       <select name="dia" id="dia" required>
+        <option value="escolha">Escolha aqui o dia</opition>
         <option value="segunda">Segunda-feira</opition>
         <option value="terça">Terça-feira</opition>
         <option value="quarta">Quarta-feira</opition>
@@ -30,36 +31,35 @@
       </select>
     </div>
 
-      <div id="tarefas-container">
-        <div class="tarefa">
-          <label>Horário:</label>
-          <input type="time" name="horario[]" required>
-          <label>Tarefa:</label>
-          <input type="text" name="atividade[]" required>
-        </div>
-      </div>
-
-    <div class="botoes-final">
-      <button type="button" onclick="adicionarTarefa()">Adicionar atividade</button>
-      <button type="submit">Salvar Agenda</button>
-    </div>
-    </form>
-
-    <script>
-    function adicionarTarefa() {
-      const container = document.getElementById('tarefas-container');
-      const div = document.createElement('div');
-      div.classList.add('tarefa');
-      div.innerHTML = `
-        <label>Horário:</label>
-        <input type="time" name="horario[]">
-        <label>Tarefa:</label>
-        <input type="text" name="atividade[]">
-    `;
-      container.appendChild(div);
-    }
-</script>
-
+    <section aria-labelledby="dia">
+        <table>
+          <thead>
+            <tr><th>Concluído</th><th>Horário</th><th>Tarefa</th></tr>
+          </thead>
+            <tbody>
+              <tr><td><input type="checkbox" name="dia_ok"></td> <td><input type="time"></td> <td><input type="text" name="dia"></td></tr>
+              <tr><td><input type="checkbox" name="dia_ok"></td> <td><input type="time"></td> <td><input type="text" name="dia"></td></tr>
+              <tr><td><input type="checkbox" name="dia_ok"></td> <td><input type="time"></td> <td><input type="text" name="dia"></td></tr>
+              <tr><td><input type="checkbox" name="dia_ok"></td> <td><input type="time"></td> <td><input type="text" name="dia"></td></tr>
+              <tr><td><input type="checkbox" name="dia_ok"></td> <td><input type="time"></td> <td><input type="text" name="dia"></td></tr>
+              <tr><td><input type="checkbox" name="dia_ok"></td> <td><input type="time"></td> <td><input type="text" name="dia"></td></tr>
+              <tr><td><input type="checkbox" name="dia_ok"></td> <td><input type="time"></td> <td><input type="text" name="dia"></td></tr>
+              <tr><td><input type="checkbox" name="dia_ok"></td> <td><input type="time"></td> <td><input type="text" name="dia"></td></tr>
+              <tr><td><input type="checkbox" name="dia_ok"></td> <td><input type="time"></td> <td><input type="text" name="dia"></td></tr>
+              <tr><td><input type="checkbox" name="dia_ok"></td> <td><input type="time"></td> <td><input type="text" name="dia"></td></tr>
+              <tr><td><input type="checkbox" name="dia_ok"></td> <td><input type="time"></td> <td><input type="text" name="dia"></td></tr>
+              <tr><td><input type="checkbox" name="dia_ok"></td> <td><input type="time"></td> <td><input type="text" name="dia"></td></tr>
+              <tr><td><input type="checkbox" name="dia_ok"></td> <td><input type="time"></td> <td><input type="text" name="dia"></td></tr>
+              <tr><td><input type="checkbox" name="dia_ok"></td> <td><input type="time"></td> <td><input type="text" name="dia"></td></tr>
+              <tr><td><input type="checkbox" name="dia_ok"></td> <td><input type="time"></td> <td><input type="text" name="dia"></td></tr>
+              <tr><td><input type="checkbox" name="dia_ok"></td> <td><input type="time"></td> <td><input type="text" name="dia"></td></tr>
+              <tr><td><input type="checkbox" name="dia_ok"></td> <td><input type="time"></td> <td><input type="text" name="dia"></td></tr>
+              <tr><td><input type="checkbox" name="dia_ok"></td> <td><input type="time"></td> <td><input type="text" name="dia"></td></tr>
+              <tr><td><input type="checkbox" name="dia_ok"></td> <td><input type="time"></td> <td><input type="text" name="dia"></td></tr>
+              <tr><td><input type="checkbox" name="dia_ok"></td> <td><input type="time"></td> <td><input type="text" name="dia"></td></tr>
+          </tbody>
+      </table>
+    </section>
   </main>
 </body>
 </html>

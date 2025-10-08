@@ -24,7 +24,7 @@ header {
     text-align: center;
     padding: 20px;
     margin-bottom: 20px;
-    background-color: #FFF8DC;
+    background-color: #f3d355;
     color: #3B3928;
 }
 
@@ -33,7 +33,7 @@ main, section {
     max-width: 900px;
     margin: 0 auto;
     padding: 20px;
-    background-color: #FFF9D1; 
+    background-color: #f3d355; 
     border-radius: 10px;
 }
 
