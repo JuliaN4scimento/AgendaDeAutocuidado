@@ -16,6 +16,8 @@ body {
     background-attachment: fixed;
     color: #3b3928;
     min-height: 100vh;
+    position: relative;
+    
 
 }
 
@@ -35,6 +37,7 @@ main, section {
     padding: 20px;
     background-color: #f3d355; 
     border-radius: 10px;
+    
 }
 
 /* ========= TÍTULOS ========= */
@@ -76,6 +79,19 @@ table {
     margin-top: 15px;
     background-color: #FFF9D1;
     margin-bottom: 30px;
+}
+
+footer {
+  background-color: #f3d355;  
+  color: black;                
+  text-align: center;         
+  padding: 50px 0;              
+  margin-top: 40px;           
+  font-size: 14px;           
+  width: 100%;    
+  position: absolute;  
+  bottom: 0%;    
+  font-weight: normal;       
 }
 
 th, td {
@@ -280,3 +296,4 @@ main.agenda-semanal-container section {
         width: 240px;
     }
 }
+
