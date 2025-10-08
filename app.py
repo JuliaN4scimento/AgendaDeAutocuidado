@@ -10,7 +10,7 @@ app.secret_key = "chave"
 conexao = mysql.connector.connect(
     host="localhost",
     user="root",
-    password="labinfo",
+    password="infoj",
     database="setembroAmarelo"
 )
 
@@ -50,7 +50,7 @@ def cadastro():
 def tipoagenda():
     return render_template('tipoagenda.html')
 
-#Rotas de escolha de tipo de agenda
+#Rotas de escolha de agenda diaria
 @app.route('/agendadiaria')
 def agendadiaria():
     return render_template('agenda_diaria.html')
@@ -59,7 +59,6 @@ def agendadiaria():
 @app.route('/agendasemanal')
 def agendasemanal():
     return render_template('agenda_semanal.html')
-
 
 #Rota de verificação de login
 @app.route('/login', methods=['GET', 'POST'])
