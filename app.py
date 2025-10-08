@@ -105,6 +105,30 @@ def salvar_agenda():
     conexao.commit()
     return redirect(url_for('agendadiaria'))
 
+#Rota resposável por inserir dados na agenda semanal
+@app.route('/final_semanal', methods=['POST'])
+def salvar_agenda_semanal():
+    if 'email' not in session:
+        return redirect(url_for('login'))
+
+    email_usuario = session['email']
+
+    dias = ['domingo', 'segunda', 'terca', 'quarta', 'quinta', 'sexta', 'sabado']
+
+    for dia in dias:
+        tarefas = request.form.getlist(f"{dia}[]")
+        horarios = request.form.getlist(f"horario_{dia}[]")
+
+        for horario, atividade in zip(horarios, tarefas):
+            if atividade.strip():  # só salva se houver texto
+                cursor.execute("""
+                    INSERT INTO agenda_semanal (email_usuario, dia_semana, horario, atividade)
+                    VALUES (%s, %s, %s, %s)
+                """, (email_usuario, dia, horario if horario else None, atividade))
+
+    conexao.commit()
+    return redirect(url_for('agendasemanal'))
+
 #Rodar o flask
 if __name__ == '__main__':
     app.run(debug=True)
