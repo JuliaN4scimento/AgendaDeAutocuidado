@@ -192,6 +192,7 @@ main.agenda-semanal-container section {
 .botoes-final {
     display: flex;
     justify-content: center;
+    background-color: #FFF8DC;
 }
 
 .botoes-final button {
