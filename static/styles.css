@@ -1,8 +1,5 @@
-/* ========= RESET GLOBAL ========= */
- * ========================================
- * RESET GLOBAL E VARIÁVEIS 
- * ========================================
- */
+/* ========= RESET GLOBAL E VARIAVEIS ========= */
+
 :root {
     /* Cores */
     --cor-primaria: #f3d355; /* Amarelo principal (fundo de main/header) */
