@@ -151,12 +151,56 @@ input, select, textarea {
 
 .container-cadastro {
     max-width: 500px; /* Largura ajustada para ser maior (Ex: 500px) */
-    margin: 40px auto; /* Adiciona margem superior/inferior e centraliza */
+    margin: 40px auto 80px auto; /* Adiciona margem superior/inferior e centraliza */
     padding: 30px;
     background-color: var(--cor-primaria);
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     border-radius: 10px;
     /* Resetando o estilo de main/section para este container específico: */
+    width: 100%;
+}
+
+/*
+ * ========================================
+ * CORREÇÃO: ALINHAMENTO DO FORMULÁRIO DE CADASTRO
+ * ========================================
+ */
+.campo-grupo {
+    display: flex; /* Habilita o Flexbox */
+    gap: 20px;     /* Espaço entre os dois campos (Nome e Telefone) */
+    margin-bottom: 20px; /* Espaço para a linha de campos de baixo */
+}
+
+.campo-grupo > div {
+    flex: 1; /* Faz com que cada campo (label+input) ocupe a mesma largura */
+    min-width: 0; /* Garante que o flex item se ajuste corretamente em telas menores */
+}
+
+/* Ajuste nos inputs e labels para funcionarem com o novo layout */
+.container-cadastro label {
+    display: block; /* Garante que o label fique acima do input */
+    font-weight: bold;
+    margin-bottom: 5px;
+    text-align: left;
+    margin-top: 0; /* Remove a margem superior que usamos antes */
+}
+
+/* Inputs (apenas um ajuste para o campo de data que é menor) */
+.container-cadastro input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 0; /* Remove a margem inferior aqui, pois a margem agora está no .campo-grupo */
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+/* Estilo para o campo de senha (que está sozinho, mas precisa de margem) */
+.campo-senha {
+    margin-bottom: 20px;
+}
+/* Alinhamento dos inputs de data/time em um campo de 100%*/
+.campo-grupo input[type="date"],
+.campo-grupo input[type="time"] {
     width: 100%;
 }
 
