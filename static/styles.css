@@ -185,9 +185,14 @@ main.agenda-semanal-container section {
 .botao-final {
     text-align: center;
     margin-top: 30px;
+    background-color: #FFF8DC;
 }
 
 /* Estilo dos botões */
+
+.botoes {
+    background-color: #FFF8DC;
+}
 
 .botoes-final {
     display: flex;
