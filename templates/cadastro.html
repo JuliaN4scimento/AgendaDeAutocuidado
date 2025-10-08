@@ -6,18 +6,21 @@
   <title>Cadastro - Ajudaí</title>
   <link rel="stylesheet" href="../static/styles.css">
   <link rel="shortcut icon" href="../static/iconeaa.png" type="image/x-icon">
-
 </head>
 <body>
-  <main class="login-container">
+
+  <header>
+    <h1>Crie sua conta no Ajudaí!</h1>
+    <p>Preencha seus dados para começar a planejar sua rotina.</p>
+  </header>
+
+  <main class="container-cadastro"> 
     <section aria-labelledby="titulo-cadastro">
-      <h1 id="titulo-cadastro">Cadastro</h1>
+      <h2 id="titulo-cadastro">Seus Dados</h2>
              
-      <form action="{{ url_for('salvar') }}" method="post">
-
-        <fieldset>
-          <legend>Informações Pessoais</legend>
-
+      <form action="{{ url_for('salvar') }}" method="post" class="formulario-cadastro">
+        
+        <div> 
           <label for="nome">Nome:</label>
           <input type="text" id="nome" name="nome" required>
 
@@ -32,11 +35,18 @@
 
           <label for="senha">Senha:</label>
           <input type="password" id="senha" name="senha" required>
-        </fieldset>
+        </div>
+        
         <div class="botao-final">
           <button type="submit">Criar conta</button>
         </div>
       </form>
     </section>
   </main>
+ <footer>
+    <p>Cuide de você um dia de cada vez.</p>
+    <p >“Pequenos hábitos constroem grandes transformações.”</p>
+    <p>&copy; 2025 Ajudaí - Sua jornada de bem-estar</p>
+</footer>
 </body>
+</html>
