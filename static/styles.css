@@ -2,6 +2,7 @@
  * RESET GLOBAL E VARIÁVEIS (CORREÇÃO DE CORES)
  * ========================================
  */
+ 
 :root {
     /* Cores */
     --cor-primaria: #f3d355; 
@@ -28,9 +29,8 @@
     font-weight: bold;
 }
 
-
-
 /* ========= FUNDO DO SITE ========= */
+
 body {
     background-image: url("auto.cuidados.fundo.png"); 
     background-size: cover;
@@ -41,10 +41,10 @@ body {
     position: relative;
     display: flex;
     flex-direction: column;
-
 }
 
 /* ========= CABEÇALHO ========= */
+
 header {
     text-align: center;
     padding: 10px 10px;
@@ -81,6 +81,7 @@ h1, h2, h3 {
 }
 
 /* ========= FORMULÁRIOS ========= */
+
 form {
     display: block;
     margin: 0 auto;
@@ -95,6 +96,7 @@ input, select, textarea {
 }
 
 /* ========= LINKS ========= */
+
 a {
     color: #1E3A5F;
     text-decoration: none;
@@ -106,6 +108,7 @@ a:hover {
 }
 
 /* ========= TABELAS GERAIS ========= */
+
 table {
     width: 100%;
     border-collapse: collapse;
@@ -126,8 +129,6 @@ footer {
   width: 100%;       
   font-weight: normal;       
 }
-
-
 
 table thead th {
     background-color: #f3d355;
@@ -160,6 +161,7 @@ table, table th, table td {
 }
 
 /* Botão do login */
+
 .login-container button {
   margin-top: 15px;
   width: 100%;
@@ -176,7 +178,9 @@ table, table th, table td {
   background-color: #ffeda3;
   transition: 0.5s;
 }
+
 /* ========= TABELAS DA AGENDA SEMANAL ========= */
+
 main.agenda-semanal-container {
     overflow-x: auto;
     white-space: nowrap;
