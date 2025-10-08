@@ -106,25 +106,26 @@ def salvar_agenda():
     return redirect(url_for('agendadiaria'))
 
 #Rota resposável por inserir dados na agenda semanal
-@app.route('/final_semanal', methods=['POST'])
+@app.route('/salvar_agenda_semanal', methods=['POST'])
 def salvar_agenda_semanal():
-    if 'email' not in session:
+    email_usuario = session.get('usuario_email')  # pega o email do usuário logado
+
+    if not email_usuario:
+        # Se o usuário não estiver logado, volta pro login
         return redirect(url_for('login'))
 
-    email_usuario = session['email']
+    dias_semana = request.form.getlist('dia_semana[]')
+    horarios = request.form.getlist('horario[]')
+    atividades = request.form.getlist('atividade[]')
 
-    dias = ['domingo', 'segunda', 'terca', 'quarta', 'quinta', 'sexta', 'sabado']
-
-    for dia in dias:
-        tarefas = request.form.getlist(f"{dia}[]")
-        horarios = request.form.getlist(f"horario_{dia}[]")
-
-        for horario, atividade in zip(horarios, tarefas):
-            if atividade.strip():  # só salva se houver texto
-                cursor.execute("""
-                    INSERT INTO agenda_semanal (email_usuario, dia_semana, horario, atividade)
-                    VALUES (%s, %s, %s, %s)
-                """, (email_usuario, dia, horario if horario else None, atividade))
+    for dia, hora, atividade in zip(dias_semana, horarios, atividades):
+        if atividade.strip():  # ignora linhas vazias
+            comando = """
+                INSERT INTO agenda_semanal (email_usuario, dia_semana, horario, atividade)
+                VALUES (%s, %s, %s, %s)
+            """
+            valores = (email_usuario, dia, hora, atividade)
+            cursor.execute(comando, valores)
 
     conexao.commit()
     return redirect(url_for('agendasemanal'))
